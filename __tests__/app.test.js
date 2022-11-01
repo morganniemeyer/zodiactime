@@ -11,7 +11,7 @@ describe('zodiac routes', () => {
     expect(zList.body).toEqual(expected);
   });
 
-  it('/zodiac/:id should return sign detail' async () => {
+  it('/zodiac/:id should return sign detail', async () => {
     const response = await request(app).get('/zodiac/1');
     const aquarius = {
       id: '1',
