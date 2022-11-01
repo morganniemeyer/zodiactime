@@ -22,7 +22,7 @@ describe('zodiac routes', () => {
     expect(response.body).toEqual(aquarius);
   });
 
-  it('/horoscopes/:sign should return horoscope and sign detail', async () => {
+  it('/horoscopes/:name should return horoscope and sign detail', async () => {
     const response = await request(app).get('/horoscopes/aries');
     const aries = {
       id: '2',
