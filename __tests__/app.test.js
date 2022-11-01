@@ -21,4 +21,16 @@ describe('zodiac routes', () => {
     };
     expect(response.body).toEqual(aquarius);
   });
+
+  it('/horoscopes/:sign should return horoscope and sign detail', async () => {
+    const response = await request(app).get('/horoscopes/aries');
+    const aries = {
+      id: '2',
+      name: 'aries',
+      dates: 'Mar 21 - Apr 19',
+      symbol: 'Ram',
+      horoscope: 'Adjust to the new vibe',
+    };
+    expect(response.body).toEqual(aries);
+  });
 });
